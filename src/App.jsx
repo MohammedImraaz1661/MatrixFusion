@@ -233,7 +233,7 @@ function App() {
                 loop
                 preload="none"
                 data-src-desktop="./desktop.mp4"
-                data-src-mobile="./mobile.mp4"
+                data-src-mobile="./mobile_compressed.mp4"
               />
             </div>
           </div>
