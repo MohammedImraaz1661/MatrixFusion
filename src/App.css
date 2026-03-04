@@ -1114,13 +1114,6 @@ body::-webkit-scrollbar {
       margin: 0 auto;
    }
 
-   .sponsor-box:nth-child(3) {
-      grid-column: 1 / -1;
-      justify-self: center;
-      width: clamp(140px, 40vw, 180px);
-      height: clamp(140px, 40vw, 180px);
-   }
-
    .sponsor-box {
       width: 100%;
       height: auto;
