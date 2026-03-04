@@ -1179,11 +1179,24 @@ body::-webkit-scrollbar {
 }
 
 .countdown-wrap {
+   position: relative;
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
    gap: clamp(3rem, 10vw, 7.5rem);
    padding: 4rem 0;
+}
+
+.countdown-label {
+   position: absolute;
+   top: 0.5rem;
+   left: 0;
+   font-family: 'Spline Sans Mono', monospace;
+   font-size: 0.75rem;
+   letter-spacing: 0.15em;
+   color: var(--color-accent);
+   text-transform: uppercase;
 }
 
 .count-item {
