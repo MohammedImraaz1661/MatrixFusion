@@ -66,7 +66,7 @@ const Pics = () => {
       </div>
       <div className="pics-grid">
         <div className="pic-box">
-          <img src="./DSC_0586 (1).jpg" alt="Event photo 1" loading="lazy" decoding="async" />
+          <img src="./DSC_0586_1.jpg" alt="Event photo 1" loading="lazy" decoding="async" />
         </div>
         <div className="pic-box">
           <img src="./DSC_3560 (2).JPG" alt="Event photo 2" loading="lazy" decoding="async" />
