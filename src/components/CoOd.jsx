@@ -33,7 +33,7 @@ const CoOd = () => {
             <div className="cood-row text-dark">
               <div className="cood-label">Organizing Chair</div>
               <div className="cood-content">
-                <h4>+91 99149-87826</h4>
+                <h4>+91 99149-57257</h4>
               </div>
             </div>
           </div>

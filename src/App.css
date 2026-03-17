@@ -929,8 +929,9 @@ body::-webkit-scrollbar {
    CO-OD SECTION
 ═══════════════════════════════════════════════════════════ */
 .cood-section {
-   padding: 12vh clamp(1.25rem, 8vw, 8rem);
-   max-width: 100%;
+   padding: 12vh clamp(1.25rem, 
+   4vw, 8rem);
+   width: 100%;
    margin: 0 auto;
 }
 

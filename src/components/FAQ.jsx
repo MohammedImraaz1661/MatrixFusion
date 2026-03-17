@@ -108,7 +108,7 @@ const FAQ = () => {
     return (
         <section className="faq-section" id="faq">
             <div className="faq-inner">
-                <span className="section-label">FAQ</span>
+                <span className="section-label">FAQ's</span>
                 <div className="faq-list">
                     {faqData.map((faq, index) => (
                         <FAQItem
