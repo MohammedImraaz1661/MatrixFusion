@@ -5,6 +5,61 @@
 @import url('https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css');
 
 /* ═══════════════════════════════════════════════════════════
+   ANNOUNCEMENT BANNER
+═══════════════════════════════════════════════════════════ */
+.announcement-banner {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 200;
+   background-color: #5F1C9B;
+   height: 2.4rem;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   cursor: default;
+}
+
+.announcement-overflow {
+   width: 100%;
+   overflow: hidden;
+}
+
+.announcement-track {
+   display: flex;
+   white-space: nowrap;
+   will-change: transform;
+}
+
+.announcement-content {
+   display: flex;
+   flex-shrink: 0;
+}
+
+.announcement-text {
+   font-family: var(--font-mono);
+   font-size: 1rem;
+   font-weight: 500;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+   color: #ffffff;
+   padding-right: 0;
+   white-space: nowrap;
+   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+   .announcement-banner {
+      height: 2rem;
+   }
+   .announcement-text {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+   }
+}
+
+/* ═══════════════════════════════════════════════════════════
    LENIS SMOOTH SCROLL CSS
 ═══════════════════════════════════════════════════════════ */
 html.lenis {
@@ -176,11 +231,17 @@ body::-webkit-scrollbar {
 ═══════════════════════════════════════════════════════════ */
 .site-header {
    position: fixed;
-   top: 0;
+   top: 2.4rem; /* sit below the announcement banner */
    left: 0;
    width: 100%;
    z-index: 100;
    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+   .site-header {
+      top: 2rem;
+   }
 }
 
 .header-inner {
@@ -885,6 +946,28 @@ body::-webkit-scrollbar {
       border: .2rem #5F1C9B solid;
       padding: .8rem .6rem;
       margin-top: 2rem;
+   }
+}
+
+/* ── Idea Submission: note below buttons ─────────────────── */
+.idea-submission-note--bottom {
+   margin-top: clamp(2rem, 4vw, 3.5rem);
+   margin-bottom: 0;
+   font-size: clamp(0.95rem, 1.9vw, 1.3rem) !important;
+   /* opacity: 0.7; */
+}
+
+@media (max-width: 768px) {
+   .idea-submission-note--bottom {
+      margin-top: 2rem;
+      font-size: 1.2rem ;
+   }
+}
+
+@media (max-width: 480px) {
+   .idea-submission-note--bottom {
+      margin-top: 1.5rem;
+      font-size: 1.2rem !important;
    }
 }
 

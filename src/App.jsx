@@ -20,6 +20,7 @@ import GradientBlinds from './components/GradientBlinds';
 import Map from './components/Map';
 import FAQ from './components/FAQ';
 import IdeaSubmission from './components/IdeaSubmission';
+import AnnouncementBanner from './components/AnnouncementBanner';
 
 import './App.css';
 
@@ -214,6 +215,8 @@ function App() {
 
   return (
     <>
+      <AnnouncementBanner />
+
       {loading && <Loader onLoadComplete={() => setLoading(false)} />}
 
       {!loading && (

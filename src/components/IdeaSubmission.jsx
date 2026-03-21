@@ -10,7 +10,7 @@ const IdeaSubmission = () => {
                     Please ensure your proposal aligns with the <span className='text-accent'>AI & ML</span> domain.
                     Download the provided PPT template, fill in your project details, and submit it through the Google Form below.
                 </p>
-                <p className="domain-text js-cursor-extend" style={{ fontSize: "1rem", marginBottom: "3rem", opacity: 0.8 }}>
+                <p className="domain-text js-cursor-extend" style={{ fontSize: "1.2rem", marginBottom: "3rem", opacity: 0.8 }}>
                     Note: Please register before submitting your idea and abstract.
                 </p>
 
@@ -23,6 +23,10 @@ const IdeaSubmission = () => {
                         <span className="js-cursor-extend-sm" id='submit'>SUBMIT ABSTRACT AND PPT</span>
                     </a>
                 </div>
+
+                <p className="domain-text js-cursor-extend idea-submission-note--bottom">
+                    Note: The PPT limit is 7 slides, as 5 slides for Content and 2 slides for Intro and Thank you.
+                </p>
             </div>
         </section>
     );

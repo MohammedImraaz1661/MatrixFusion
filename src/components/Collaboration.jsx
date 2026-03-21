@@ -24,6 +24,9 @@ const Collaboration = () => {
           <div className="sponsor-box">
             <img src="./Genesis.png" alt="Genesis" />
           </div>
+          <div className="sponsor-box">
+            <img src="./BraveyNex.png" alt="BravyNex" />
+          </div>
         </div>
       </div>
 
@@ -43,9 +46,12 @@ const Collaboration = () => {
           <div className="sponsor-box">
             <img src="./Abhimo.png" alt="Abhinmo" />
           </div>
-          {/* <div className="sponsor-box"> */}
-            {/* <img src="./sponsor3.png" alt="Sponsor 3" /> */}
-          {/* </div> */}
+          <div className="sponsor-box">
+          <img src="./JumpWhere.png" alt="JumpWhere" />
+          </div>
+          <div className="sponsor-box">
+          <img src="./PaceWisdom.png" alt="PaceWisdom" />
+          </div>
         </div>
       </div>
     </section>
