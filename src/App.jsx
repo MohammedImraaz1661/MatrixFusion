@@ -249,7 +249,7 @@ function App() {
           <div id="main">
             <Header />
             <SocialIcons />
-            <a href="/Matrix_fusion_4.0_brochure.pdf" download className="brochure-fixed js-cursor-extend-sm">
+            <a href="/Brochure.pdf" download className="brochure-fixed js-cursor-extend-sm">
               <span>BROCHURE</span>
             </a>
 

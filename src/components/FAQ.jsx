@@ -48,7 +48,7 @@ const faqData = [
     },
     {
         question: "Registrations last date",
-        answer: "Although the last date of registration and of idea submission is the same, March 22nd 2026, They are seperate activities. Registration is currently open. An early registration by you will be useful to us."
+        answer: "Although the last date of registration and of idea submission is the same, March 24th 2026, They are seperate activities. Registration is currently open. An early registration by you will be useful to us."
     },
     {
         question: "Can a team formed of students from different colleges?",
@@ -108,7 +108,7 @@ const FAQ = () => {
     return (
         <section className="faq-section" id="faq">
             <div className="faq-inner">
-                <span className="section-label">FAQ's</span>
+                <span className="section-label">FAQ<span style={{textTransform:'none'}}>s</span></span>
                 <div className="faq-list">
                     {faqData.map((faq, index) => (
                         <FAQItem

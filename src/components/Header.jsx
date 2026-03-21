@@ -55,8 +55,8 @@ const Header = () => {
           </a>
           <a href="#faq" className="js-cursor-contract">
             <span className="nav-item-inner">
-              <span className="nav-item-link nav-item-link__default">FAQs</span>
-              <span className="nav-item-link nav-item-link__active">FAQs</span>
+              <span className="nav-item-link nav-item-link__default">FAQ<span style={{textTransform:'none'}}>s</span></span>
+              <span className="nav-item-link nav-item-link__active">FAQ<span style={{textTransform:'none'}}>s</span></span>
             </span>
           </a>
         </nav>
