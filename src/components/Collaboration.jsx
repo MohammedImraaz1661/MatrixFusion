@@ -4,7 +4,7 @@ const Collaboration = () => {
   return (
     <section className="collab-sponsored-wrapper">
       {/* Collaboration */}
-      <div className="collab-block">
+      <div className="collab-block" id="collaboration">
         <h2 className="collab-title">
           In <span className="text-accent">Collaboration</span> with
         </h2>
@@ -34,7 +34,7 @@ const Collaboration = () => {
       <div className="collab-divider" />
 
       {/* Sponsored By */}
-      <div className="collab-block">
+      <div className="collab-block" id="sponsors">
         <h2 className="collab-title">
           <span className="text-accent">Sponsored</span> by
         </h2>
