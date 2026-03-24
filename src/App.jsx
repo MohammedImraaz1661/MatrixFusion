@@ -29,6 +29,22 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const [loading, setLoading] = useState(true);
   const [isTouch, setIsTouch] = useState(false);
+  const [isRegistrationClosed, setIsRegistrationClosed] = useState(false);
+
+  // Check if registration deadline has passed
+  useEffect(() => {
+    const deadline = new Date(2026, 2, 24, 23, 59, 59); // March 24, 2026, 23:59:59
+
+    const checkDeadline = () => {
+      if (new Date() >= deadline) {
+        setIsRegistrationClosed(true);
+      }
+    };
+
+    checkDeadline();
+    const interval = setInterval(checkDeadline, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // Touch detection
@@ -215,7 +231,7 @@ function App() {
 
   return (
     <>
-      <AnnouncementBanner />
+      <AnnouncementBanner isRegistrationClosed={isRegistrationClosed} />
 
       {loading && <Loader onLoadComplete={() => setLoading(false)} />}
 
@@ -253,13 +269,13 @@ function App() {
               <span>BROCHURE</span>
             </a>
 
-            <Hero />
+            <Hero isRegistrationClosed={isRegistrationClosed} />
 
             <div className="below-fold">
               <InteractiveGrid />
               <About />
               <Flow />
-              <Domain />
+              <Domain isRegistrationClosed={isRegistrationClosed} />
               <IdeaSubmission />
               <CoOd />
               <Prizes />

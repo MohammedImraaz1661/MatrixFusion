@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ isRegistrationClosed }) => {
   return (
     <section className="hero" id="hero-section">
       <div className="hero-content">
@@ -25,14 +25,18 @@ const Hero = () => {
           WHERE CODING MEETS <span>AI & ML.</span>
         </p>
         <div className="hero-btn-group">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdVRQIdBtHkKFEIgoKcIV07FcHz3z9T8a642Qp99xGa27WSgg/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-register-btn js-cursor-extend-sm"
-          >
-            REGISTER NOW
-          </a>
+          {isRegistrationClosed ? (
+            <p className="registration-closed-note">Registration is closed.</p>
+          ) : (
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdVRQIdBtHkKFEIgoKcIV07FcHz3z9T8a642Qp99xGa27WSgg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-register-btn js-cursor-extend-sm"
+            >
+              REGISTER NOW
+            </a>
+          )}
           <div className="hero-btn-row">
             <a href="./MatrixFusion 4.0 PPT.pptx" download className="hero-secondary-btn js-cursor-extend-sm">
               PPT TEMPLATE

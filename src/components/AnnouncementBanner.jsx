@@ -1,18 +1,26 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const TEXT = 'Registrations are going to close tonight.';
+const OPEN_TEXT = 'Registrations are going to close tonight.';
+const CLOSED_TEXT = 'Registrations are closed.';
 const SEPARATOR = '\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'; // spacing only
 
-const AnnouncementBanner = () => {
+const AnnouncementBanner = ({ isRegistrationClosed }) => {
     const trackRef = useRef(null);
     const contentRef = useRef(null);
     const tweenRef = useRef(null);
+
+    const text = isRegistrationClosed ? CLOSED_TEXT : OPEN_TEXT;
 
     useEffect(() => {
         const track = trackRef.current;
         const content = contentRef.current;
         if (!track || !content) return;
+
+        // Remove old clones
+        while (track.children.length > 1) {
+            track.removeChild(track.lastChild);
+        }
 
         // Clone to make seamless loop
         const clone = content.cloneNode(true);
@@ -52,9 +60,9 @@ const AnnouncementBanner = () => {
             container.removeEventListener('mouseleave', play);
             if (tweenRef.current) tweenRef.current.kill();
         };
-    }, []);
+    }, [isRegistrationClosed]);
 
-    const item = `${TEXT}${SEPARATOR}`;
+    const item = `${text}${SEPARATOR}`;
 
     return (
         <div className="announcement-banner">

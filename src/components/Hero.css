@@ -157,6 +157,20 @@
   border-color: #5F1C9B;
 }
 
+/* Registration Closed Note */
+.registration-closed-note {
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ff4d4d;
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(2rem, 4vw, 3.5rem);
+  border: 0.15rem solid #ff4d4d;
+  text-align: center;
+  opacity: 0.9;
+}
+
 /* Dual button row */
 .hero-btn-row {
   display: flex;
