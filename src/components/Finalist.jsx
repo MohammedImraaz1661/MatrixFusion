@@ -100,6 +100,11 @@ const Finalist = () => {
           </div>
         ))}
       </div>
+
+      {/* Note */}
+      <p className="finalist-note">
+        <span>Note —</span> All the selected teams for the Matrix Fusion 4.0, 24 Hour National Level Hackathon have to be registered by paying a Registration amount of <span>Rs. 600</span> on or before <span>28th March 2026 midnight</span>.
+      </p>
     </section>
   );
 };

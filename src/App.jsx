@@ -79,6 +79,9 @@ function App() {
         smooth: true,
       });
 
+      // Expose globally so components can call lenis.scrollTo with custom duration
+      window.lenis = lenis;
+
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);

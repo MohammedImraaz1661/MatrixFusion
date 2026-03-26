@@ -26,7 +26,14 @@ const Hero = ({ isRegistrationClosed }) => {
         </p>
         <div className="hero-btn-group">
           {isRegistrationClosed ? (
-            <a href="#finalist-section" className="registration-closed-note js-cursor-extend-sm">Scroll for Results or Click here</a>
+            <a
+              href="#finalist-section"
+              className="registration-closed-note js-cursor-extend-sm"
+              onClick={(e) => {
+                e.preventDefault();
+                window.lenis?.scrollTo('#finalist-section', { duration: 3.5 });
+              }}
+            >Scroll for Results or Click here</a>
           ) : (
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdVRQIdBtHkKFEIgoKcIV07FcHz3z9T8a642Qp99xGa27WSgg/viewform?usp=header"
