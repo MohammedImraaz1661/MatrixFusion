@@ -26,25 +26,18 @@ const Hero = ({ isRegistrationClosed }) => {
         </p>
         <div className="hero-btn-group">
           {isRegistrationClosed ? (
-            <p className="registration-closed-note">Registration is closed.</p>
+            <a href="#finalist-section" className="registration-closed-note js-cursor-extend-sm">Scroll for Results or Click here</a>
           ) : (
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdVRQIdBtHkKFEIgoKcIV07FcHz3z9T8a642Qp99xGa27WSgg/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-register-btn js-cursor-extend-sm"
-            >
+            > 
               REGISTER NOW
             </a>
           )}
-          <div className="hero-btn-row">
-            <a href="./MatrixFusion 4.0 PPT.pptx" download className="hero-secondary-btn js-cursor-extend-sm">
-              PPT TEMPLATE
-            </a>
-            <a href="https://forms.gle/wn5FHJFvPfm7UuSs7" target="_blank" rel="noopener noreferrer" className="hero-secondary-btn js-cursor-extend-sm">
-              SUBMIT ABSTRACT &amp; PPT
-            </a>
-          </div>
+
         </div>
       </div>
     </section>

@@ -1,0 +1,161 @@
+/* ══════════════════════════════════════════════════════════
+   FINALIST SECTION
+   Matches cood-section padding; uses heading-mask animation
+   from App.css (no curtain effect).
+══════════════════════════════════════════════════════════ */
+
+.finalist-section {
+  padding: 12vh clamp(1.25rem, 4vw, 8rem);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── Desktop wrapper (hidden on mobile) ─────────────────── */
+.finalist-desktop {
+  display: block;
+}
+
+.finalist-mobile-list {
+  display: none;
+}
+
+/* ── Column header row ─────────────────────────────────── */
+.finalist-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid rgba(95, 28, 155, 0.35);
+  margin-bottom: 0;
+  margin-top: 4rem;
+}
+
+.finalist-col {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  display: block;
+}
+
+/* ── Row list ───────────────────────────────────────────── */
+.finalist-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Each row (deep + masking layers) ──────────────────── */
+.finalist-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  align-items: baseline;
+  width: 100%;
+  padding: clamp(1.2rem, 2.5vh, 1.8rem) 0;
+}
+
+/* Placeholder text in deep layer */
+.finalist-placeholder {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 1.4vw, 1.6rem);
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.06em;
+}
+
+/* Real team name in masking layer */
+.finalist-team-name {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 1.4vw, 1.6rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+/* Real leader name */
+.finalist-leader {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
+  font-weight: 400;
+  color: var(--color-dark);
+}
+
+/* Real college name */
+.finalist-college {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.4vw, 1.7rem);
+  font-weight: 400;
+  color: var(--color-dark);
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE CARD LIST (no table, no animation)
+══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .finalist-section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Swap visibility */
+  .finalist-desktop {
+    display: none;
+  }
+
+  .finalist-mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Each card */
+  .finalist-mobile-card {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(95, 28, 155, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .finalist-mobile-card:first-child {
+    border-top: 1px solid rgba(95, 28, 155, 0.18);
+  }
+
+  /* Row 1: team name + leader side by side */
+  .finalist-mobile-top {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .finalist-mobile-name {
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+
+  .finalist-mobile-leader {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.65;
+  }
+
+  /* Row 2: college */
+  .finalist-mobile-college {
+    font-family: var(--font-display);
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.45;
+  }
+}

@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const OPEN_TEXT = 'Registrations are going to close tonight.';
-const CLOSED_TEXT = 'Registrations are closed.';
+const BANNER_TEXT = 'Results are published, check it out in the Finalist section.';
 const SEPARATOR = '\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'; // spacing only
 
 const AnnouncementBanner = ({ isRegistrationClosed }) => {
@@ -10,7 +9,7 @@ const AnnouncementBanner = ({ isRegistrationClosed }) => {
     const contentRef = useRef(null);
     const tweenRef = useRef(null);
 
-    const text = isRegistrationClosed ? CLOSED_TEXT : OPEN_TEXT;
+    const text = BANNER_TEXT;
 
     useEffect(() => {
         const track = trackRef.current;

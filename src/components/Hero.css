@@ -164,11 +164,28 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #ff4d4d;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   padding: clamp(0.75rem, 1.5vw, 1rem) clamp(2rem, 4vw, 3.5rem);
-  border: 0.15rem solid #ff4d4d;
+  border: 0.15rem solid var(--color-dark);
   text-align: center;
   opacity: 0.9;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease,
+              border-color 0.3s ease, transform 0.15s ease, opacity 0.3s ease;
+}
+
+.registration-closed-note:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+  opacity: 1;
+}
+
+.registration-closed-note:active {
+  transform: scale(0.97);
 }
 
 /* Dual button row */
@@ -230,6 +247,10 @@
 }
 
 @media (max-width: 480px) {
+  .registration-closed-note {
+    font-size: 0.65rem;
+  }
+
   .hero-register-btn {
     margin-top: 0;
     padding: 0.65rem 2.7rem;

@@ -10,6 +10,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Flow from './components/Flow';
 import Domain from './components/Domain';
+import Finalist from './components/Finalist';
 import CoOd from './components/CoOd';
 import Pics from './components/Pics';
 import Prizes from './components/Prizes';
@@ -275,6 +276,7 @@ function App() {
               <InteractiveGrid />
               <About />
               <Flow />
+              <Finalist />
               <Domain isRegistrationClosed={isRegistrationClosed} />
               <IdeaSubmission />
               <CoOd />
